@@ -1,6 +1,8 @@
 ---
+excerpt_separator: ""
 ---
-
+{{ post.excerpt }}
+{% highlight perl %}
 #!/usr/bin/perl
 
 #open armstrong password file and give it a perl file handle called ARMSTRONG
@@ -23,7 +25,6 @@ open (TODOCFILE, ">aliases") || die "Sorry, I cannot open a file to write to (al
 #counters for loops to get usernames
 $counter=0;
 $counter1=0;
-
 #get usernames from armstrong passwd file
 foreach $data (@armsList) {
     @myArr=split(/\:/, $data);
@@ -87,4 +88,5 @@ close(HADAR);
 
 #exit program
 exit(0);
+{% endhighlight %}
 
