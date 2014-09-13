@@ -8,6 +8,7 @@ twitter_username: retmaze
 github_username:  mattmazer
 safe: true
 timezone: America/New_York
+excerpt_separator: ""
 
 
 # Build settings
