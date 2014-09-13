@@ -11,9 +11,10 @@
 }
 
 .site-title {
-    font-size: 26px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 38px;
+    font-weight: 400;
     line-height: 56px;
-    letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
 
@@ -174,7 +175,7 @@
     list-style: none;
 
     > li {
-        margin-bottom: $spacing-unit;
+        margin-bottom: 0;
     }
 }
 
@@ -183,9 +184,15 @@
     color: $grey-color;
 }
 
+.post-meta-author {
+    font-size: 10px;
+    color: $grey-color;
+}
+ 
 .post-link {
-    display: block;
-    font-size: 24px;
+    /*display: block;*/
+    font-size: 14px;
+    padding: 5px;
 }
 
 

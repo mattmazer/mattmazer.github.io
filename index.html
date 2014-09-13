@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-<!-- <link rel="stylesheet" href="/css/screen.css" type="text/css" /> -->
 <div class="home">
 
   <h1 class="page-heading">Portfolio</h1>
@@ -9,8 +8,7 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <h2>&#187;<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
       </li>
     {% endfor %}
