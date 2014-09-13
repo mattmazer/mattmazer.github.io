@@ -44,7 +44,6 @@ foreach $data1 (@hadaList) {
 
 }
 
-
 #check if user is in both armstrong and hadar
 #foreach $data5(@namesArray) {  #this line follows old logic, was not that good.  Instead of using a nested foreach loop I put a for loop in the foreach loop so I can use Perl's splice method.
 
@@ -63,18 +62,6 @@ foreach $data4 (@namesArrayHad) {                  #for each user in hadar
     }  #close for
 }   #close foreach
 	
-#more old stuff
-#check if user is in armstrong and not hadar
-#foreach $data6(@namesArray) {
-#    foreach $data7(@namesArrayHad) {
-#	if ($data6 ne $data7) {
-#	    print "$data6\n"
-#	    }
-#    }
-#}
-#%test;
-#end more old stuff
-
 #actually write the alias file
 foreach $data10(@namesArray) {
     printf(TODOCFILE "%s:%s\@armstrong.cse.buffalo.edu\n",$data10,$data10);

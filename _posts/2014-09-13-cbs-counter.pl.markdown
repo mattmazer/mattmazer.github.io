@@ -9,7 +9,6 @@ permalink: /scripts/email-address-counter.html
 
 use Email::Valid;
 
-
 my $prompt="\nPlease enter the filename to be opened\:\nBy default, \"emailthis_log.dat\" is opened.\n\n";
 print $prompt;
 
@@ -26,7 +25,6 @@ else {
     open (LOGFILE, $file) || die "Sorry, I cannot open file $file ($!)\n"; 
 }
 
-
 my $counter=0;       #counter for total e-mails
 my $counter2=0;      #counter for unique e-mails
 
@@ -40,10 +38,8 @@ my $counterOther=0;
 #set contents of LOGFILE to array @file.  Every line of LOGFILE is an index in @file
 my @file = <LOGFILE>;
 
-
 #associative array (hash) to hold unique e-mail addresses.
 my %emails;
-
 
 #the foreach structure goes through each each index of @file and does the statements below
 
@@ -57,16 +53,12 @@ foreach $data (@file) {
 	if($myArr[$i] =~ /\@/ && Email::Valid->address($myArr[$i])) {
 	    
 	    $emails{$myArr[$i]} = 1;
-	    
-	    
+	    	    
 	    #print "Found at $i:  $myArr[$i]\n\n";
 	    $counter++;
 	} #close if	
 	
     } #close for
-    
-    
-    
 }  #close foreach
 
 # This foreach prints out all of the unique e-mails. No doubles!
@@ -104,8 +96,6 @@ foreach $email (sort(keys(%emails))) {
 	$num++;
 	
     }
-    
-    
 }
 print "---------------------------\n";
 print "Total e-mails: $counter\n";
@@ -129,13 +119,6 @@ for($i=0;$i<=$#otherEmail;$i++) {
 
 close(LOGFILE);
 {% endhighlight %}
-
-
-
-
-
-
-
 
 
 

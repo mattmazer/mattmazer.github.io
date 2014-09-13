@@ -10,6 +10,8 @@ safe: true
 timezone: America/New_York
 excerpt_separator: ""
 highlighter: pygments
+include: [.htaccess, robots.txt]
+exclude: [Gemfile, README.md]
 
 # Build settings
 markdown: kramdown

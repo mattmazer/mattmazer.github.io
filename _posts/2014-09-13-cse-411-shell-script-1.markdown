@@ -15,7 +15,6 @@ echo "This program requires a command line argument which should be a username"
 exit
 endif 
 
-
 #have grep filter out passwd file to return line with the command line ($1) entry.
 #in other words, grep will return the line with the username on it  
 #then pipe it to awk to print out the 4th field which is the primary group number
