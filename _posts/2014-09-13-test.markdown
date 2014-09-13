@@ -1,9 +1,6 @@
 ---
-excerpt_separator: ""
+
 ---
-asd
-{{ post.excerpt }}
-asd
 {% highlight perl %}
 #!/usr/bin/perl
 
