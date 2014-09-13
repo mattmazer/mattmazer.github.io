@@ -9,7 +9,7 @@ github_username:  mattmazer
 safe: true
 timezone: America/New_York
 excerpt_separator: ""
-
+highlighter: pygments
 
 # Build settings
 markdown: kramdown
