@@ -3,13 +3,14 @@ title: Portfolio
 email: m@ttmazer.com
 description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "localhost" # the base hostname & protocol for your site
 twitter_username: retmaze
 github_username:  mattmazer
 safe: true
 timezone: America/New_York
 excerpt_separator: ""
 highlighter: pygments
+
 
 # Build settings
 markdown: kramdown
