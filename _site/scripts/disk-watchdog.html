@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Welcome to Jekyll! | Matthew Mazer</title>
+    <title>Disk Watchdog | Matthew Mazer</title>
     <meta name="description" content="">
 
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="">	
-    <link rel="canonical" href="localhost/jekyll/update/2014/09/13/welcome-to-jekyll.html">
+    <link rel="canonical" href="localhost/scripts/disk-watchdog.html">
     
     <!-- Google Analytics -->
     <script>
@@ -69,24 +69,53 @@
 <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Welcome to Jekyll!</h1>
-    <p class="post-meta-author"></p>
+    <h1 class="post-title">Disk Watchdog</h1>
+    <p class="post-meta-author"> &copy; Matthew Mazer</p>
   </header>
 
   <article class="post-content">
-    <p>You’ll find this post in your <code>_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code>jekyll serve --watch</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+    
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
 
-<p>To add new posts, simply add a file in the <code>_posts</code> directory that follows the convention <code>YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/Private/usr/local/bin:/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin
+<span class="c">#In order to fix hard link problem in DU module I edited the module to follow links by default! </span>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+perl -I<span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/Private/usr/local/lib/perl5/site_perl <span class="se">\</span>
+    <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/Private/usr/local/bin/drivespace.pl <span class="s2">&quot;$@&quot;</span>
 
-<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">&quot;Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">&#39;Tom&#39;</span><span class="p">)</span>
-<span class="c1">#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.</span></code></pre></div>
+<span class="nb">exit</span> <span class="nv">$?</span></code></pre></div>
 
-<p>Check out the <a href="http://jekyllrb.com">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://github.com/jekyll/jekyll-help">Jekyll’s dedicated Help repository</a>.</p>
+<p>Perl script drivespace.pl was created to be run on build machines to report drive space.  Using perl2exe the script was converted to an executable that is run on Windows Scheduler.</p>
+
+<h1 id="usage-for-drivespacepl">Usage for drivespace.pl</h1>
+
+<p>default (no options) - show stats for all drives on screen.</p>
+
+<p><span style="font-family:Courier">
+-t <threshold percentage=""> - mark drives that have reached threshold.<br />
+-t <threshold percentage=""> --to &lt;address&gt; [--from &lt;address&gt;] [--cc &lt;address&gt;] [--server <smtp address="">]
+[--verbose] – view smtp e-mail stats.<br />
+--log <filename> - turns off STDOUT and writes report to a log file. <br />
+--temp <path> - provide path for temporary file.  defaults to c:/temp</path></filename></smtp></threshold></threshold></span></p>
+
+<p>On each build box a directory, c:\rel, was created.  Usually, the c: drive is for system whereas d: is for data.  C:\engrel contains drivespace.exe and its log file.</p>
+
+<p>Currently, the executable is set to run as follows:</p>
+
+<p>Every 2 hours from 7:00am for 24 hours every day.</p>
+
+<p>To set up Windows Scheduler:</p>
+
+<ol>
+  <li>Start → Programs → Accessories → System Tools → Scheduled Tasks</li>
+  <li>Click “Add Scheduled Task”</li>
+  <li>Choose the program to run.  Click ‘browse’ if program is not on the list.  </li>
+  <li>Choose frequency to run.</li>
+  <li>Choose time of day.</li>
+  <li>In this case, run as autobuild (with password).</li>
+  <li>If applicable, under the ‘advanced’ tab, enable ‘repeat task’.  In this case, drivespace is repeated every 24 hours for 2 hours.</li>
+  <li>Add comments if necessary.</li>
+</ol>
 
 
   </article>

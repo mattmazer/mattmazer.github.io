@@ -5,37 +5,9 @@
     <description></description>
     <link>localhost/</link>
     <atom:link href="localhost/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 13 Sep 2014 18:08:09 -0400</pubDate>
-    <lastBuildDate>Sat, 13 Sep 2014 18:08:09 -0400</lastBuildDate>
+    <pubDate>Mon, 15 Sep 2014 17:04:17 -0400</pubDate>
+    <lastBuildDate>Mon, 15 Sep 2014 17:04:17 -0400</lastBuildDate>
     <generator>Jekyll v2.3.0</generator>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve --watch&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 13 Sep 2014 06:34:54 -0400</pubDate>
-        <link>localhost/jekyll/update/2014/09/13/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">localhost/jekyll/update/2014/09/13/welcome-to-jekyll.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
     
       <item>
         <title>Creating a Mail Alias File</title>
@@ -305,6 +277,158 @@ awk -F: &lt;span class=&quot;s1&quot;&gt;&amp;#39;/^.*:.*:&amp;#39;&lt;/span&gt;
         <pubDate>Sat, 13 Sep 2014 00:00:00 -0400</pubDate>
         <link>localhost/scripts/email-address-counter.html</link>
         <guid isPermaLink="true">localhost/scripts/email-address-counter.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Log With Time Stamp</title>
+        <description>
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-perl&quot; data-lang=&quot;perl&quot;&gt;&lt;span class=&quot;c1&quot;&gt;#!/usr/bin/perl&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Turn off buffering on STDOUT&lt;/span&gt;
+&lt;span class=&quot;vg&quot;&gt;$|&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$line&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$hour&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$mday&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$mon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$wday&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$yday&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$isdst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;localtime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;$now&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sprintf&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;[%04d-%02d-%02d %02d:%02d:%02d] &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+		    &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1900&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$mon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$mday&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+		     &lt;span class=&quot;nv&quot;&gt;$hour&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$sec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$now&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Mon, 01 Sep 2014 00:00:00 -0400</pubDate>
+        <link>localhost/scripts/log-with-time-stamp.html</link>
+        <guid isPermaLink="true">localhost/scripts/log-with-time-stamp.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Disk Watchdog</title>
+        <description>
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;HOME&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/Private/usr/local/bin:/usr/local/bin:/bin:/sbin:/usr/bin:/usr/sbin
+&lt;span class=&quot;c&quot;&gt;#In order to fix hard link problem in DU module I edited the module to follow links by default! &lt;/span&gt;
+
+perl -I&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;HOME&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/Private/usr/local/lib/perl5/site_perl &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;HOME&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/Private/usr/local/bin/drivespace.pl &lt;span class=&quot;s2&quot;&gt;&amp;quot;$@&amp;quot;&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$?&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Perl script drivespace.pl was created to be run on build machines to report drive space.  Using perl2exe the script was converted to an executable that is run on Windows Scheduler.&lt;/p&gt;
+
+&lt;h1 id=&quot;usage-for-drivespacepl&quot;&gt;Usage for drivespace.pl&lt;/h1&gt;
+
+&lt;p&gt;default (no options) - show stats for all drives on screen.&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:Courier&quot;&gt;
+-t &lt;threshold percentage=&quot;&quot;&gt; - mark drives that have reached threshold.&lt;br /&gt;
+-t &lt;threshold percentage=&quot;&quot;&gt; --to &amp;lt;address&amp;gt; [--from &amp;lt;address&amp;gt;] [--cc &amp;lt;address&amp;gt;] [--server &lt;smtp address=&quot;&quot;&gt;]
+[--verbose] – view smtp e-mail stats.&lt;br /&gt;
+--log &lt;filename&gt; - turns off STDOUT and writes report to a log file. &lt;br /&gt;
+--temp &lt;path&gt; - provide path for temporary file.  defaults to c:/temp&lt;/path&gt;&lt;/filename&gt;&lt;/smtp&gt;&lt;/threshold&gt;&lt;/threshold&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;On each build box a directory, c:\rel, was created.  Usually, the c: drive is for system whereas d: is for data.  C:\engrel contains drivespace.exe and its log file.&lt;/p&gt;
+
+&lt;p&gt;Currently, the executable is set to run as follows:&lt;/p&gt;
+
+&lt;p&gt;Every 2 hours from 7:00am for 24 hours every day.&lt;/p&gt;
+
+&lt;p&gt;To set up Windows Scheduler:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Start → Programs → Accessories → System Tools → Scheduled Tasks&lt;/li&gt;
+  &lt;li&gt;Click “Add Scheduled Task”&lt;/li&gt;
+  &lt;li&gt;Choose the program to run.  Click ‘browse’ if program is not on the list.  &lt;/li&gt;
+  &lt;li&gt;Choose frequency to run.&lt;/li&gt;
+  &lt;li&gt;Choose time of day.&lt;/li&gt;
+  &lt;li&gt;In this case, run as autobuild (with password).&lt;/li&gt;
+  &lt;li&gt;If applicable, under the ‘advanced’ tab, enable ‘repeat task’.  In this case, drivespace is repeated every 24 hours for 2 hours.&lt;/li&gt;
+  &lt;li&gt;Add comments if necessary.&lt;/li&gt;
+&lt;/ol&gt;
+
+</description>
+        <pubDate>Mon, 01 Sep 2014 00:00:00 -0400</pubDate>
+        <link>localhost/scripts/disk-watchdog.html</link>
+        <guid isPermaLink="true">localhost/scripts/disk-watchdog.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Announce a Release</title>
+        <description>
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# announceRelease shell script&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# send to automation@companyredacted.com.  &lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# cc to engineering@companyredacted.com&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;IAM&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;MYDIR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;dirname &lt;span class=&quot;nv&quot;&gt;$IAM&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;ANNOUNCE_REL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;MYDIR&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/announceRelease.pl
+
+&lt;span class=&quot;nv&quot;&gt;CC&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;release@companyredacted.com
+&lt;span class=&quot;nv&quot;&gt;SERVER&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;server.companyredacted.com
+&lt;span class=&quot;nv&quot;&gt;FROM&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;release@companyredacted.com
+&lt;span class=&quot;nv&quot;&gt;ROOT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~/Public/TEST-BUILDS
+&lt;span class=&quot;nv&quot;&gt;ROOTUNC&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\\\\\autobuild\\Public\\TEST-BUILDS&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# FTP address hidden&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;FTP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;255.255.255.0/TEST-BUILDS&amp;quot;&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;$ANNOUNCE_REL&lt;/span&gt; --verbose --from &lt;span class=&quot;nv&quot;&gt;$FROM&lt;/span&gt; --server &lt;span class=&quot;nv&quot;&gt;$SERVER&lt;/span&gt; --root &lt;span class=&quot;nv&quot;&gt;$ROOT&lt;/span&gt;  --rootunc &lt;span class=&quot;nv&quot;&gt;$ROOTUNC&lt;/span&gt; --ftp &lt;span class=&quot;nv&quot;&gt;$FTP&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$@&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</description>
+        <pubDate>Mon, 01 Sep 2014 00:00:00 -0400</pubDate>
+        <link>localhost/scripts/announce-release.html</link>
+        <guid isPermaLink="true">localhost/scripts/announce-release.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Offshore Publish</title>
+        <description>
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/perl -w&lt;/span&gt;
+
+use File::Find&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+use File::Basename&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;$FROM_DIR&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/Users/autobuild/Public/TEST-BUILDS&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$TO_DIR&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/Users/autobuild/Public/OffshoreMirror/TEST-BUILDS&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+find sub &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;-d &lt;span class=&quot;nv&quot;&gt;$_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nv&quot;&gt;$dir_to_create&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$File&lt;/span&gt;::Find::name&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nv&quot;&gt;$dir_to_create&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~ s/^&lt;span class=&quot;nv&quot;&gt;$FROM_DIR&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$TO_DIR&lt;/span&gt;/&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;! -d &lt;span class=&quot;nv&quot;&gt;$dir_to_create&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	    mkdir &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$dir_to_create&lt;/span&gt;, 0755&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; or die &lt;span class=&quot;s2&quot;&gt;&amp;quot;Can&amp;#39;t create directory $dir_to_create: $!\n&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;-f &lt;span class=&quot;nv&quot;&gt;$_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nv&quot;&gt;$link_target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$File&lt;/span&gt;::Find::name&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nv&quot;&gt;$link_dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; dirname&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$link_target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nv&quot;&gt;$link_dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~ s/&lt;span class=&quot;nv&quot;&gt;$FROM_DIR&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$TO_DIR&lt;/span&gt;/&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nv&quot;&gt;$link_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; basename&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$link_target&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;! -l &lt;span class=&quot;s2&quot;&gt;&amp;quot;$link_dir/$link_name&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	    symlink &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$link_target&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&amp;quot;$link_dir/$link_name&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; or
+		die &lt;span class=&quot;s2&quot;&gt;&amp;quot;Can&amp;#39;t make a link $link_dir/$link_name -&amp;gt; $link_target: $!\n &amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;, &lt;span class=&quot;nv&quot;&gt;$FROM_DIR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;exit &lt;/span&gt;0&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Mon, 01 Sep 2014 00:00:00 -0400</pubDate>
+        <link>localhost/scripts/offshore-publish.html</link>
+        <guid isPermaLink="true">localhost/scripts/offshore-publish.html</guid>
         
         
       </item>

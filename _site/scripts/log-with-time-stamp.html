@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Portfolio | Matthew Mazer</title>
+    <title>Log With Time Stamp | Matthew Mazer</title>
     <meta name="description" content="">
 
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="">	
-    <link rel="canonical" href="localhost/">
+    <link rel="canonical" href="localhost/scripts/log-with-time-stamp.html">
     
     <!-- Google Analytics -->
     <script>
@@ -64,55 +64,34 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'> 
+<div class="post">
 
-  <h1 class="page-heading">Portfolio</h1>
+  <header class="post-header">
+    <h1 class="post-title">Log With Time Stamp</h1>
+    <p class="post-meta-author"> &copy; Matthew Mazer</p>
+  </header>
 
-  <ul class="post-list">
+  <article class="post-content">
     
-      <li>
-        <h2>&#187;<a class="post-link" href="/scripts/create-mail-alias-file.html">Creating a Mail Alias File</a>
-        </h2>
-      </li>
-    
-      <li>
-        <h2>&#187;<a class="post-link" href="/scripts/disk-usage.html">Disk Usage Display</a>
-        </h2>
-      </li>
-    
-      <li>
-        <h2>&#187;<a class="post-link" href="/scripts/primary-group-user.html">Display Primary Group For User</a>
-        </h2>
-      </li>
-    
-      <li>
-        <h2>&#187;<a class="post-link" href="/scripts/email-address-counter.html">E-mail Address Counter</a>
-        </h2>
-      </li>
-    
-      <li>
-        <h2>&#187;<a class="post-link" href="/scripts/log-with-time-stamp.html">Log With Time Stamp</a>
-        </h2>
-      </li>
-    
-      <li>
-        <h2>&#187;<a class="post-link" href="/scripts/disk-watchdog.html">Disk Watchdog</a>
-        </h2>
-      </li>
-    
-      <li>
-        <h2>&#187;<a class="post-link" href="/scripts/announce-release.html">Announce a Release</a>
-        </h2>
-      </li>
-    
-      <li>
-        <h2>&#187;<a class="post-link" href="/scripts/offshore-publish.html">Offshore Publish</a>
-        </h2>
-      </li>
-    
-  </ul>
+<div class="highlight"><pre><code class="language-perl" data-lang="perl"><span class="c1">#!/usr/bin/perl</span>
 
- <!-- <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p> -->
+<span class="c1"># Turn off buffering on STDOUT</span>
+<span class="vg">$|</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="nv">$line</span> <span class="o">=</span> <span class="o">&lt;&gt;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">(</span><span class="nv">$sec</span><span class="p">,</span><span class="nv">$min</span><span class="p">,</span><span class="nv">$hour</span><span class="p">,</span><span class="nv">$mday</span><span class="p">,</span><span class="nv">$mon</span><span class="p">,</span><span class="nv">$year</span><span class="p">,</span><span class="nv">$wday</span><span class="p">,</span><span class="nv">$yday</span><span class="p">,</span><span class="nv">$isdst</span><span class="p">)</span> <span class="o">=</span> <span class="nb">localtime</span><span class="p">();</span>
+    <span class="nv">$now</span> <span class="o">=</span> <span class="nb">sprintf</span> <span class="p">(</span><span class="s">&quot;[%04d-%02d-%02d %02d:%02d:%02d] &quot;</span><span class="p">,</span>
+		    <span class="p">(</span><span class="mi">1900</span><span class="o">+</span><span class="nv">$year</span><span class="p">,</span> <span class="nv">$mon</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nv">$mday</span><span class="p">,</span>
+		     <span class="nv">$hour</span><span class="p">,</span> <span class="nv">$min</span><span class="p">,</span> <span class="nv">$sec</span><span class="p">));</span>
+    <span class="k">print</span> <span class="nv">$now</span> <span class="o">.</span> <span class="nv">$line</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nb">exit</span> <span class="mi">0</span><span class="p">;</span></code></pre></div>
+
+
+  </article>
 
 </div>
 
