@@ -10,7 +10,7 @@ safe: true
 timezone: America/New_York
 excerpt_separator: ""
 highlighter: pygments
-include: [.htaccess, robots.txt]
+include: [.htaccess, robots.txt, favicon.ico]
 exclude: [Gemfile, README.md]
 
 # Build settings
